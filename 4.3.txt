@@ -1,0 +1,21 @@
+import cv2, numpy
+photo1 = cv2.imread('Tom3.png')
+cv2.imshow('Image_1', photo1)
+cv2.waitKey()
+cv2.destroyAllWindows() 
+photo2 = cv2.imread('Jerry3.png')
+cv2.imshow('Image_2', photo2)
+cv2.waitKey()
+cv2.destroyAllWindows() 
+cropped1=photo1[50:150,0:100]
+cv2.imshow('Cropped_1', cropped1)
+cv2.waitKey()
+cv2.destroyAllWindows() 
+cropped2=photo2[20:120,0:100]
+cv2.imshow('Cropped_2', cropped2)
+cv2.waitKey()
+cv2.destroyAllWindows() 
+collage= numpy.concatenate((cropped1,cropped2))     #Concat/Adding both the cropped images 
+cv2.imshow('Collage', collage)
+cv2.waitKey()
+cv2.destroyAllWindows() 
